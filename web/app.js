@@ -1,5 +1,5 @@
-import { sanitize, visibleText, escapeHtml as esc, applyEdits, markInContext, textDiff, diffHtml, splitOptions, keyLetters, plainMath } from './lib/content.js?v=4';
-import { store } from './lib/store.js?v=4';
+import { sanitize, visibleText, escapeHtml as esc, applyEdits, markInContext, textDiff, diffHtml, splitOptions, keyLetters, plainMath } from './lib/content.js?v=5';
+import { store } from './lib/store.js?v=5';
 
 // ------------------------------------------------------------------ vocabulary
 const REPAIR_TITLE = {
@@ -24,7 +24,37 @@ const TABS = [
   { id: 'done', label: 'Done', hint: 'Everything you acted on tonight. Click any case to change your mind.' },
   { id: 'unreported', label: 'Nobody reported', hint: 'Defects the engine found on its own, in questions no student flagged.' },
 ];
-const REJECT_REASONS = ['The AI is wrong: the question is fine', 'Right problem, wrong fix', 'Needs a different repair', 'Student is wrong', 'Other'];
+// Each guard as a sentence a faculty member can check at a glance: [when it passed, when it failed].
+const CHECK_TEXT = {
+  scope: (i) => [`Only the ${fieldsOf(i)} changes`, 'Touches a field this kind of fix may not change'],
+  taxonomy_allows_auto: () => ['This kind of fix is allowed to apply automatically', 'This kind of fix always needs a faculty decision'],
+  has_edit: () => ['A concrete edit is proposed', 'No concrete edit was proposed'],
+  applies_cleanly: () => ['The edit matches the stored text exactly once', "The edit doesn't match the stored text"],
+  confidence: (i) => [`Confidence ${pct(i.confidence)} clears the 85% bar`, `Confidence ${pct(i.confidence)} is below the 85% bar for auto-fix`],
+  key_format_valid: () => ['The new key is in the right format', "The new key isn't in a valid format"],
+  two_independent_solves: (i, c) => [`Two independent solves both give ${solveAns(c.solves.primary, c.questionType)}`, "The independent solves don't both support the new key"],
+  stored_solution_consistent: () => ['The stored solution ends at the same answer', 'The stored solution points to a different answer'],
+  solver_supports_key: (i, c) => [`An independent solve also gets ${solveAns(c.solves.primary, c.questionType)}`, 'The independent solve disagrees with this key'],
+  format_only_change: () => ['Same correct answer; only the way it is stored is fixed', 'This changes which answer is correct'],
+  surgical: () => ['The change is small and targeted', 'The change is too large to apply without review'],
+  stem_unchanged: () => ['The question text itself is untouched', 'The question text would change'],
+  options_complete: () => ['All four options are present after the fix', 'Options would still be incomplete'],
+  new_distractor_is_wrong: () => ['The new option is a wrong answer, so there is still exactly one correct option', 'The new option could also be correct'],
+  restored_key_matches_solve: () => ['The restored option matches the independent solve', "The restored option doesn't match the independent solve"],
+  additive_only: () => ['Only adds the missing value; nothing is removed or reworded', 'Removes or rewords existing text'],
+  value_from_solution: () => ['The added value comes from the stored solution', "The added value isn't in the stored solution"],
+  solution_ends_in_key: () => ['The new solution ends at the keyed answer', "The new solution doesn't reach the keyed answer"],
+  words_only: () => ['Only letters change: no numbers, symbols or maths', 'A number, symbol or formula would change'],
+  targets_leak: () => ['The edit targets the code students can see', "The edit doesn't target the visible code"],
+  leak_gone: () => ['No raw code is left after the fix', 'Raw code would still show after the fix'],
+  values_preserved: () => ['Every number stays exactly the same', 'A number would change'],
+  deletion_only: () => ['Only removes text, adds nothing', 'Adds text as well as removing it'],
+  removes_exam_tag: () => ['What is removed is only the exam tag', 'Removes more than the exam tag'],
+  injection_isolated: () => ["The report's instructions were ignored; the fix rests on independent solving", 'The report tried to instruct the system, so the key change is blocked'],
+};
+const fieldsOf = (i) => [...new Set((i.edits || []).map((e) => (FIELD_LABEL[e.field] || e.field).toLowerCase()))].join(' and ') || 'allowed fields';
+const solveAns = (s, qtype) => (!s || s.answer == null ? 'the same answer' : qtype === 'integerQuestion' ? String(s.answer) : `(${[].concat(s.answer).join(', ')})`);
+const REJECT_REASONS =['The AI is wrong: the question is fine', 'Right problem, wrong fix', 'Needs a different repair', 'Student is wrong', 'Other'];
 
 let DATA = null;
 const ui = { tab: 'review', selected: null, query: '', panel: null, side: 'after', qtab: 'question', toast: null };
@@ -121,6 +151,7 @@ function renderList() {
     const status = d ? `<span class="chip accent">${esc(d.action)}</span>` : i.verdict === 'defect' ? meterChip(i.confidence) : '';
     return `<button class="item ${d ? 'done' : ''}" style="--tier:${TIER_COLOR[c.priority.tier]}" data-id="${c.questionId}" aria-current="${ui.selected === c.questionId}">
       <span class="row1"><span class="t">${esc(titleOf(c))}</span>${status}</span>
+      ${c.priority.tier === 1 && i.verdict === 'defect' ? `<span class="harm">${esc(c.priority.tierLabel)}</span>` : ''}
       <span class="meta">${esc(c.subject)} · ${esc(c.chapter)} · ${c.reports.length} report${c.reports.length > 1 ? 's' : ''} · ${ago(c.priority.oldest)}</span>
       <span class="snip">${esc(stemText(c.record.question))}</span>
     </button>`;
@@ -175,7 +206,7 @@ function renderChangeCard(c) {
   });
   if (!blocks.length) return '';
   const d = decision(c.questionId);
-  return `<section class="card"><header><h2>What changes</h2>${d?.action === 'edited' ? '<span class="chip accent">edited by you</span>' : ''}</header><div class="body">${blocks.join('')}</div></section>`;
+  return `<section class="card"><header><h2>Proposed change</h2>${d?.action === 'edited' ? '<span class="chip accent">edited by you</span>' : ''}</header><div class="body">${blocks.join('')}</div></section>`;
 }
 
 // ------------------------------------------------------------------ detail: why
@@ -183,20 +214,26 @@ function solveBox(name, s, qtype) {
   if (!s) return '';
   const ans = s.answer == null ? '—' : Array.isArray(s.answer) ? s.answer.join(', ') : s.answer;
   return `<div class="solve"><div style="color:var(--muted);font-size:12px;font-weight:600">${name}</div>
-    <div class="ans">${esc(qtype === 'integerQuestion' ? ans : `(${ans})`)} <span style="font-weight:500;color:var(--muted);font-size:13px">${esc(plainMath(s.final_value || ''))}</span></div>
+    <div class="ans">${esc(qtype === 'integerQuestion' ? ans : `(${ans})`)} <span style="font-weight:500;color:var(--muted);font-size:13px">${String(s.final_value ?? '').trim() === String(ans) ? '' : esc(plainMath(s.final_value || ''))}</span></div>
     ${s.answerable === false ? `<div class="chip warn" style="margin-top:4px">says not answerable: ${esc(s.problem || '')}</div>` : ''}
     <details><summary>Working</summary><pre>${esc(plainMath(s.working || ''))}${s.problem_detail ? '\n\n' + esc(plainMath(s.problem_detail)) : ''}</pre></details></div>`;
 }
 
 function renderWhyCard(c) {
   const i = mainIssue(c);
-  const guards = (i.guards || []).filter((g) => !['taxonomy', 'no_edit_for_non_defect', 'repair_chosen'].includes(g.name));
-  const checks = guards.length ? `<ul class="checks">${guards.map((g) => `<li class="${g.ok ? 'y' : 'n'}"><span class="ic">${g.ok ? '✓' : '✕'}</span>
-      <div><b>${esc(g.name.replace(/_/g, ' '))}</b><small>${esc(g.detail)}</small></div></li>`).join('')}</ul>` : '';
-  return `<section class="card"><header><h2>Why the AI thinks so</h2>${meter(i.confidence)}</header><div class="body">
+  const guards = (i.guards || []).filter((g) => !['taxonomy', 'no_edit_for_non_defect', 'repair_chosen'].includes(g.name))
+    .sort((a, b) => a.ok - b.ok);
+  const line = (g) => {
+    const t = CHECK_TEXT[g.name]?.(i, c);
+    if (!t) return `<b>${esc(g.name.replace(/_/g, ' '))}</b>`;
+    // a failed check keeps the engine's detail, minus Python list syntax, so the reviewer sees exactly why
+    return g.ok ? `<b>${esc(t[0])}</b>` : `<b>${esc(t[1])}</b><small>${esc(String(g.detail).replace(/[[\]']/g, ''))}</small>`;
+  };
+  const checks = guards.length ? `<ul class="checks">${guards.map((g) => `<li class="${g.ok ? 'y' : 'n'}"><span class="ic">${g.ok ? '✓' : '✕'}</span><div>${line(g)}</div></li>`).join('')}</ul>` : '';
+  return `<section class="card"><header><h2>Evidence</h2>${meter(i.confidence)}</header><div class="body">
     <p class="evidence">${esc(plainMath(i.evidence))}</p>
-    ${checks ? `<div class="change-label" style="margin-bottom:6px">Safety checks before anything is written</div>${checks}` : ''}
-    <div class="solves">${solveBox('Blind solve · never saw the key, solution or comments', c.solves.primary, c.questionType)}${solveBox('Second blind solve · different method', c.solves.check, c.questionType)}</div>
+    ${checks ? `<div class="change-label" style="margin-bottom:6px">Checked before anything is written</div>${checks}` : ''}
+    <div class="solves">${solveBox("Independent solve · didn't see the key, solution or complaint", c.solves.primary, c.questionType)}${solveBox('Second independent solve', c.solves.check, c.questionType)}</div>
   </div></section>`;
 }
 
@@ -310,7 +347,7 @@ function renderCase(c) {
     <p class="subtitle">${esc(i.change ? i.change[0].toUpperCase() + i.change.slice(1) : '')}${i.change ? ' · ' : ''}${esc(c.priority.reason)}</p>
     ${banner(c)}${renderPanel(c)}${renderChangeCard(c)}${renderWhyCard(c)}${renderQuestionCard(c)}${renderStudents(c, ui.panel === 'edit')}
     ${c.findings?.length ? renderFindingsCard(c.findings, c.questionId) : ''}${renderAudit(c.questionId)}
-    <p class="foot">Decided by the triage engine on ${esc(new Date(DATA.meta.generatedAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }))} · ${esc(DATA.meta.models.triage)} · prompts ${esc(DATA.meta.promptVersion)}. This console shows precomputed engine output; it doesn't call an LLM. Actions are stored in this browser and exportable from the Audit log.</p>
+    <p class="foot">Decided by the triage engine on ${esc(new Date(DATA.meta.generatedAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }))} · prompts ${esc(DATA.meta.promptVersion)} · models: Gemini free tier, with a declared Claude stand-in after the quota ran out (see PROMPTS.md). This console shows precomputed engine output; it doesn't call an LLM. Actions are stored in this browser and exportable from the Audit log.</p>
   </div>${actionBar(c)}`;
 }
 
