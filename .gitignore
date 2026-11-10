@@ -16,3 +16,4 @@ venv/
 Thumbs.db
 .vercel
 engine/pending/
+_private/

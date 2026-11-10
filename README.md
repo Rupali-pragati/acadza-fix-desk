@@ -2,7 +2,7 @@
 
 A student taps **Report error** and types *"ans galat hai"*. This system works out what is actually true, writes the smallest safe fix, applies it only when it can prove it, and hands everything else to faculty in a console built for a tired person at 10 PM.
 
-- **Live console:** `<add your Vercel / GitHub Pages URL>`
+- **Live console:** https://acadza-fix-desk.onrender.com (loads precomputed engine output; no LLM calls from the browser)
 - **Scored output:** [`results.json`](results.json) (44 reports)
 - **Defects nobody reported (bonus):** [`findings.json`](findings.json), also in the console's *Nobody reported* tab
 - **Docs:** [`PROMPTS.md`](PROMPTS.md) (prompts, failures, decisions) · [`PRODUCT.md`](PRODUCT.md) (one page)

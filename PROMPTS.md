@@ -214,20 +214,32 @@ If I iterated further, v2 would tell the investigator to write evidence in plain
 
 ## 2. Prompts I gave my AI coding assistant
 
-I built this with Claude Code (Claude Opus 5.5) as my coding assistant. These are my messages to it, verbatim and in order. Typos are left as I wrote them.
+Tool: **Claude Code (Claude Opus 5.5)**, used as a pair programmer for the engine, the console and the docs. Below are the key prompts, verbatim (informal, typos kept), grouped by phase, with the decision each one carried.
 
-1. *(I pasted the full Acadza email with the brief, deadline and deliverables, attached `Acadza_AI_Intern_Assignment.zip`, and wrote:)*
-   > please complete this task carefully cz it's my evaluation test for job i want the best code the bestest result so he'll be impress
-2. > read read me as well there task is explained
-3. *(Answers to the assistant's setup questions:)* LLM provider → **"Free Gemini key"**. Author name → **"Rupali"**. Where to build (the original folder was read-only) → **"New folder in Documents (Recommended)"**.
-4. > Yes, it's saved in .env.example
+**Scoping.** I gave it the whole brief and data, and set the quality bar and the constraints.
+> *(the Acadza email + `Acadza_AI_Intern_Assignment.zip`)* please complete this task carefully cz it's my evaluation test for job i want the best code the bestest result so he'll be impress
 
-   (I had pasted the key into the wrong file. The assistant moved it into the git-ignored `.env` without printing it, and recreated a blank `.env.example`.)
-5. > keep running meanwhile tell me why it's taking so long any issue
-6. > good idea also use urself where api need for now only so i can get the output if possible
-7. > I hit my usage limit while you were working, but it has reset now. Please continue from where you left off.
+> read read me as well there task is explained
 
-Message 6 is why most of the cache says `answeredBy: claude-opus-5-5`. **I disclose this plainly in the next section and in the README.**
+Setup choices I made when it asked: **free Gemini key** (cost: ₹0), and a fresh project folder (the original was read-only).
+
+**Running the pipeline.** I questioned a run that looked healthy but wasn't moving.
+> keep running meanwhile tell me why it's taking so long any issue
+
+That question uncovered the 19-hour sleep bug ([§3, moment 3](#3-three-moments-the-ai-was-wrong-and-how-i-caught-it)).
+
+> good idea also use urself where api need for now only so i can get the output if possible
+
+This is a deadline decision: finish the run with a declared stand-in instead of waiting a day for the quota to reset. It is disclosed below and in the README.
+
+**Design review.** I pushed back on the first console and chose the redesign.
+> don't u think site is looking li very genrous and ai genrated?
+
+> can u give me example for each with a picture in this chat so i can decide
+
+> in 1 exam paper type question i want verticle option … 2. light mode is perfect 3. confidance keep it as it is 4. 5. 6. do as u thing will imapct more
+
+Result: a serif "exam paper" face for questions with one option per line, light mode by default, safety checks written as plain sentences, and colour reserved for "marks students wrong". I kept the confidence badges on purpose, because a reviewer should see how sure the engine is.
 
 ### Declared: who answered the model calls
 
