@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.3,
+ "created": "2026-11-10T17:05:10Z",
+ "usage": {},
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: scq  (single correct: exactly one of A-D)\nSubject: Botany | Chapter: Morphology of Flowering Plants\n\nQUESTION:\n(NEET 2019) Which of the following is the green expanded part ofleaf with vein and veinlets?\n\n(A) Petiole\n(B) Node\n(C) Stipule\n(D) Lamina\n\nSTORED ANSWER KEY: \"D\"\n\nSTORED SOLUTION:\nLamina on the leaf blade is usually flattened green photosynthetic part consisting leaf veins and veinlets. Its upper surface is called adaxial while the lower surface is called abaxial. The shape margin, apex, surface and extent of incision of lamina vary in different leaves.\n\nDecisions, one per student:\n{\"reportId\": \"R013\", \"student_comment\": \"why NEET 2019 written in question\", \"verdict\": \"defect\", \"repair\": \"exam_reference\", \"route\": \"auto_apply\", \"what_changed\": \"question text corrected\", \"student_was_right\": \"yes\", \"key_point\": \"The stem starts with the source tag '(NEET 2019)', which is filing metadata, not part of the question. Deleted only that tag.\", \"manipulation_attempt\": false}",
+ "response": "{\"replies\": [{\"reportId\": \"R013\", \"reply\": \"Thanks, you're right. That source tag didn't belong in the question text, and it has been removed.\"}]}"
+}

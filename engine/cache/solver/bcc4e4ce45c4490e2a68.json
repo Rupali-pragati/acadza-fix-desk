@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Photoelectric effect and matter waves\n\nQUESTION:\nLight of wavelength 4000 A^∘ falls on a metal surface having work function of 2.0 eV. What is the stopping potential?\n\n(A) 3.1 V\n(B) 2.0 V\n(C) 5.1 V\n(D) 1.1 V",
+ "response": "{\"working\": \"E = 12400/4000 = 3.1 eV; V0 = 3.1 − 2.0 = 1.1 V.\", \"answer\": \"D\", \"final_value\": \"1.1 V\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.99}"
+}

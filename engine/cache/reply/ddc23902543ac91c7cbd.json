@@ -1,0 +1,20 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "temperature": 0.3,
+ "created": "2026-11-10T12:54:45Z",
+ "usage": {
+  "promptTokenCount": 907,
+  "candidatesTokenCount": 118,
+  "totalTokenCount": 1025,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 907
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Alternating Current and EM Waves\n\nQUESTION:\nA resistance of 40 ohm and an inductance are connected in series in a 50 cycles/second ac circuit. The impedance of this combination is very nearly\n\n(A) 30 ohm\n(B) 40 ohm\n(C) 50 ohm\n(D) 60 ohm\n\nSTORED ANSWER KEY: \"C\"\n\nSTORED SOLUTION:\nZ = √(R^2 + (2πvL)^2) = √((40)^2 + 4π^2×(50)^2×(95.5×10^(− 3))^2) = 50ohm\n\nDecisions, one per student:\n{\"reportId\": \"R008\", \"student_comment\": \"data missing\", \"verdict\": \"defect\", \"repair\": \"stem_data\", \"route\": \"auto_apply\", \"what_changed\": \"question text corrected\", \"student_was_right\": \"yes\", \"key_point\": \"The question stem omits the inductance value, stating only 'an inductance are connected'. The solution explicitly uses L = 95.5 × 10^-3 H (95.5 mH) to calculate X_L = 30 ohm and Z = sqrt(40^2 + 30^2) = 50 ohm.\", \"manipulation_attempt\": false}\n{\"reportId\": \"R007\", \"student_comment\": \"inductance ki value hi nahi di hai\", \"verdict\": \"defect\", \"repair\": \"stem_data\", \"route\": \"auto_apply\", \"what_changed\": \"question text corrected\", \"student_was_right\": \"yes\", \"key_point\": \"The question stem omits the inductance value, stating only 'an inductance are connected'. The solution explicitly uses L = 95.5 × 10^-3 H (95.5 mH) to calculate X_L = 30 ohm and Z = sqrt(40^2 + 30^2) = 50 ohm.\", \"manipulation_attempt\": false}",
+ "response": "{\n  \"replies\": [\n    {\n      \"reportId\": \"R008\",\n      \"reply\": \"You were right, the inductance value was missing from the question stem. It has been updated with L = 95.5 mH.\"\n    },\n    {\n      \"reportId\": \"R007\",\n      \"reply\": \"Haan, inductance ki value missing thi question mein. Woh ab add kar di gayi hai, L = 95.5 mH.\"\n    }\n  ]\n}"
+}

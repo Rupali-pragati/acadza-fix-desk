@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.3,
+ "created": "2026-11-10T17:05:09Z",
+ "usage": {},
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: integerQuestion  (numerical answer typed by the student)\nSubject: Physics | Chapter: Newton's law of motion\n\nQUESTION:\nA body of mass 2 kg is kept by pressing to a vertical wall by a force of 100 N. The friction between wall and body is 0.3. Then the frictional force is equal to\n\nSTORED ANSWER KEY: \"20\"\n\nSTORED SOLUTION:\nThe maximum friction available to prevent sliding is given by:\n\nf_(max) = μ × N = 0.3 × 100 = 30N\n\nThe force pulling the body down is its weight,\n\nW = mg = 2 × 10 = 20N\n\nStatic friction is a self-adjusting force that only acts to balance the applied force, up to its maximum value. Since the weight (W = 20 N) is less than the maximum available friction ( f_(max) = 30N ), the body remains at rest. Therefore, the actual frictional force is exactly equal to the weight.\n\nDecisions, one per student:\n{\"reportId\": \"R024\", \"student_comment\": \"unit not mentioned in question\", \"verdict\": \"defect\", \"repair\": \"answer_form\", \"route\": \"auto_apply\", \"what_changed\": \"question text corrected\", \"student_was_right\": \"yes\", \"key_point\": \"The integer answer is 20 N but the question never says which unit to type. Added '(in N)' only. Static friction = mg = 20 N < mu N = 30 N, so the key stays 20.\", \"manipulation_attempt\": false}",
+ "response": "{\"replies\": [{\"reportId\": \"R024\", \"reply\": \"You were right, the unit wasn't stated. The question now says '(in N)', and the answer is 20 (static friction balances the 20 N weight).\"}]}"
+}

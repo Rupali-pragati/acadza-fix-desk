@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.3,
+ "created": "2026-11-10T17:05:09Z",
+ "usage": {},
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Electrostatics\n\nQUESTION:\nTwo point charges repel each other with a force of 100 N. One of the charges is increased by 10% and the other is reduced by 10%. The new force of repulsion at the same distance would be\n\n(A) 100 N\n(B) 121 N\n(C) 99 N\n(D) None of these\n\nSTORED ANSWER KEY: \"C\"\n\nSTORED SOLUTION:\n100 = kq_1q_2/r^2 F = k(1.1q_1)(0.9q_2)/r^2 ⇒ F/100 = 0.99 ⇒ F = 99 N\n\nDecisions, one per student:\n{\"reportId\": \"R036\", \"student_comment\": \"options are cut on my phone screen\", \"verdict\": \"display_issue\", \"repair\": null, \"route\": \"no_change\", \"what_changed\": \"\", \"student_was_right\": \"partly\", \"key_point\": \"Options cut off on a phone is a layout problem; the stored options are complete and correct (1.1 x 0.9 = 0.99, 99 N, key C).\", \"manipulation_attempt\": false}",
+ "response": "{\"replies\": [{\"reportId\": \"R036\", \"reply\": \"The question and its options are stored correctly, so this is a display problem and the app team has it. Rotating the phone to landscape usually shows the full options for now.\"}]}"
+}

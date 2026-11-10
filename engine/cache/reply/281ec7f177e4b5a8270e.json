@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.3,
+ "created": "2026-11-10T16:42:10Z",
+ "usage": {},
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: scq  (single correct: exactly one of A-D)\nSubject: Botany | Chapter: Photosynthesis in Higher Plants\n\nQUESTION:\nRate of photosynthesis is low in herbs, shrubs as compared to sun plants because\n\n(A) Herb, shrubs receive more red light\n(B) Herb, shrubs receive more blue light\n(C) Herb, shrubs receive more green light\n(D) Herb, shrubs receive more white light\n\nSTORED ANSWER KEY: \"C\"\n\nSTORED SOLUTION:\nMinimum photosynthesis occur in the green wavelength. Plants grow under the canopy like herbs and shrubs receive very little red and blue-violet light because of its absorption by leaves of the canopy. They receive more of green light that is transmitted through leaves. As a result, the photosynthesis in herbs and shrubs is comparatively low\n\nDecisions, one per student:\n{\"reportId\": \"R017\", \"student_comment\": \"spelling mistake 'mere' in options\", \"verdict\": \"already_fixed\", \"repair\": null, \"route\": \"no_change\", \"what_changed\": \"\", \"student_was_right\": \"yes\", \"key_point\": \"Error history: faculty changed 'mere' -> 'more' in options A-C on 2026-11-07, after this report (2026-11-04); the live options all read 'more'.\", \"manipulation_attempt\": false}",
+ "response": "{\"replies\": [{\"reportId\": \"R017\", \"reply\": \"Thanks for flagging this. The spelling in the options has already been corrected to 'more', so the question reads properly now.\"}]}"
+}

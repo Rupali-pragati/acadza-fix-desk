@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.3,
+ "created": "2026-11-10T17:05:09Z",
+ "usage": {},
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Nuclear physics and radioactivity\n\nQUESTION:\nThe half life period of a radioactive substance is 60 days. The time taken for \\frac{7}{8} th of its original mass to disintegrate will be :\n\n(A) 120 days\n(B) 130 days\n(C) 180 days\n(D) 20 days\n\nSTORED ANSWER KEY: \"C\"\n\nSTORED SOLUTION:\n7/8 disintegrates means 1/8 remains\n\nOr (1/2)^3\n∴ 3 half lives\n= 180 days\n\nDecisions, one per student:\n{\"reportId\": \"R014\", \"student_comment\": \"some code is showing \\\\frac in question\", \"verdict\": \"defect\", \"repair\": \"markup_leak\", \"route\": \"auto_apply\", \"what_changed\": \"question text corrected\", \"student_was_right\": \"yes\", \"key_point\": \"Raw LaTeX '\\\\frac{7}{8}' is shown to students in the stem; replaced by the same fraction in MathML. Numbers unchanged; key C (3 half-lives = 180 days) stays.\", \"manipulation_attempt\": false}",
+ "response": "{\"replies\": [{\"reportId\": \"R014\", \"reply\": \"Thanks for flagging it. The raw code is gone and the question now shows the fraction 7/8 properly. The answer is still 180 days.\"}]}"
+}

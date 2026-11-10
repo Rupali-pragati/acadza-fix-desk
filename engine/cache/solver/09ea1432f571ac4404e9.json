@@ -1,0 +1,21 @@
+{
+ "model": "gemini-3.5-flash",
+ "temperature": 0.0,
+ "created": "2026-11-10T12:51:56Z",
+ "usage": {
+  "promptTokenCount": 537,
+  "candidatesTokenCount": 68,
+  "totalTokenCount": 789,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 537
+   }
+  ],
+  "thoughtsTokenCount": 184,
+  "serviceTier": "standard"
+ },
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Zoology | Chapter: Structural Organisation in Animals\n\nQUESTION:\nWhich tissue is present in the lining of small intestine?\n\n(A) Epithellial tisue\n(B) Connective tissue\n(C) Nervous tissue\n(D) Muscular tissue",
+ "response": "{\"working\": \"The lining of internal organs such as the small intestine is formed by epithelial tissue (specifically simple columnar epithelium).\", \"answer\": \"A\", \"final_value\": \"Epithelial tissue\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 1.0}"
+}

@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: integerQuestion  (numerical answer typed by the student)\nSubject: Physics | Chapter: Electrostatics\n\nQUESTION:\nA total charge Q is uniformly distributed throughout the volume of a sphere. Electric potential at a point on the surface of the sphere is greater than the potential at infinity by 16 V . Find the potential difference (in volt) between point 𝐏 at a distance half of the radius of the sphere from the centre and the point 𝐒 at a distance double the radius of the sphere from the centre of the sphere.",
+ "response": "{\"working\": \"Uniform sphere: V(r<R) = kQ(3R² − r²)/(2R³). kQ/R = 16 V. V(R/2) = 16·(11/8) = 22 V; V(2R) = 16/2 = 8 V. Difference = 14 V.\", \"answer\": \"14\", \"final_value\": \"14 V\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.97}"
+}

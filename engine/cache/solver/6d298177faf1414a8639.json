@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Photoelectric effect and matter waves\n\nQUESTION:\nWhat should be the approximate kinetic energy of an electron so that its de-Broglie wavelength is equal to the wavelength of X-ray of maximum energy, produced in an X-ray tube operating at 24800 V ? (given that h = 6.6×10^(− 34) joule-sec, mass of electron = 9.1×10^(− 31) kg )\n\n(A) 600 eV\n(B) 365 eV\n(C) 120 eV\n(D) 300 eV",
+ "response": "{\"working\": \"λ_min = hc/eV = 12400/24800 Å = 0.5 Å. KE = h²/(2mλ²) = (6.6e-34)²/(2·9.1e-31·(0.5e-10)²) ≈ 9.6e-17 J ≈ 600 eV.\", \"answer\": \"A\", \"final_value\": \"≈ 600 eV\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.95}"
+}

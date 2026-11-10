@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3-flash-preview",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.7,
+ "created": "2026-11-10T16:42:10Z",
+ "usage": {},
+ "system_sha": "a82169402963",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: AC Circuits\n\nQUESTION:\nIn an AC circuit, the current is i = 5sin(100t − π/2)A and voltage is e = 200sin(100t) volt. Power consumption in the circuit is ( cos90° = 0 )\n\n(A) 200 W\n(B) 0 W\n(C) 0 W\n(D) 1000 W",
+ "response": "{\"working\": \"Current lags voltage by 90°, so average power = (200·5/2)·cos90° = 0. Both B and C read '0 W'.\", \"answer\": null, \"final_value\": \"0 W\", \"answerable\": false, \"problem\": \"multiple_correct\", \"problem_detail\": \"B and C are the same option text '0 W'.\", \"confidence\": 0.96}"
+}

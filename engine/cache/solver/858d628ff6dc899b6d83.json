@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Electrostatics\n\nQUESTION:\nThere are two charges + 3μC and − 4μC placed at a certain distance apart. The ratio of coulombic forces acting on them will be\n\n(A) 9:16\n(B) 2:√(3)\n(C) [BLANK - nothing shown to students]\n(D) 3:4",
+ "response": "{\"working\": \"By Newton's third law the forces on the two charges are equal and opposite, so the ratio is 1:1. No visible option says 1:1; option C is blank.\", \"answer\": null, \"final_value\": \"1:1\", \"answerable\": false, \"problem\": \"missing_option\", \"problem_detail\": \"The correct ratio 1:1 is not among the visible options; option C is blank and is most likely where 1:1 belongs.\", \"confidence\": 0.97}"
+}

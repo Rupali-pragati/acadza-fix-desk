@@ -1,0 +1,21 @@
+{
+ "model": "gemini-3.5-flash",
+ "temperature": 0.0,
+ "created": "2026-11-10T12:52:52Z",
+ "usage": {
+  "promptTokenCount": 607,
+  "candidatesTokenCount": 128,
+  "totalTokenCount": 2399,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 607
+   }
+  ],
+  "thoughtsTokenCount": 1664,
+  "serviceTier": "standard"
+ },
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Centre of mass and momentum conservation (collision)\n\nQUESTION:\nTwo blocks of masses 10 kg and 4 kg are connected by a spring of negligible mass and placed on a frictionless horizontal surface. An impulse gives a velocity of 14 m/s to the heavier block in the direction of the lighter block. The velocity of the centre of mass is\n\n(A) 30 m/s\n(B) 20 m/s\n(C) 10 m/s\n(D) [MISSING - option not present in the record]",
+ "response": "{\n  \"working\": \"v_cm = (m1 * v1 + m2 * v2) / (m1 + m2) = (10 * 14 + 4 * 0) / (10 + 4) = 140 / 14 = 10 m/s.\",\n  \"answer\": \"C\",\n  \"final_value\": \"10 m/s\",\n  \"answerable\": true,\n  \"problem\": null,\n  \"problem_detail\": \"\",\n  \"confidence\": 1.0\n}"
+}

@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.3,
+ "created": "2026-11-10T17:05:29Z",
+ "usage": {},
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: AC Circuits\n\nQUESTION:\nIn an AC circuit, the current is i = 5sin(100t − π/2)A and voltage is e = 200sin(100t) volt. Power consumption in the circuit is ( cos90° = 0 )\n\n(A) 200 W\n(B) 0 W\n(C) 0 W\n(D) 1000 W\n\nSTORED ANSWER KEY: \"B\"\n\nSTORED SOLUTION:\n&P = I_(rms)V_(rms)cosϕ\n&ϕ = 90°\n\n∴ P = 0 ( ∵ cos90° = 0)\n\nDecisions, one per student:\n{\"reportId\": \"R015\", \"student_comment\": \"two options are same B and C\", \"verdict\": \"defect\", \"repair\": \"identical_options\", \"route\": \"faculty_review\", \"what_changed\": \"\", \"student_was_right\": \"yes\", \"key_point\": \"Options (B) and (C) both read '0 W', so two options are correct in a single-correct question. The physics answer is 0 W (phase difference 90 degrees), key B.\", \"manipulation_attempt\": false}",
+ "response": "{\"replies\": [{\"reportId\": \"R015\", \"reply\": \"Good catch: options (B) and (C) are both '0 W'. A faculty member is reviewing the options now. The physics answer is 0 W, since the current and voltage are 90° out of phase.\"}]}"
+}

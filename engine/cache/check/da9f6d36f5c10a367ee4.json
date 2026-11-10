@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3-flash-preview",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.7,
+ "created": "2026-11-10T16:42:10Z",
+ "usage": {},
+ "system_sha": "a82169402963",
+ "user": "Type: mcq  (multiple correct: one or more of A-D, answer is a list of letters)\nSubject: Physics | Chapter: Electrostatics\n\nQUESTION:\nSelect the correct statement(s) from the following. The path of a charged particle moving with an initial velocity u\n\n(A) parallel to the uniform electrostatic field is a straight line.\n(B) perpendicular to the uniform electrostatic field is a parabola.\n(C) parallel to the uniform magnetic field is a helix with its axis parallel to the direction of B .\n(D) perpendicular to the uniform magnetic field is a circle in a plane normal to the field.",
+ "response": "{\"working\": \"Force qE constant: along u ⇒ line (A ✓); across u ⇒ projectile-like parabola (B ✓). Magnetic force q u×B: u ∥ B ⇒ zero force, straight line, so C (helix) ✗; u ⊥ B ⇒ uniform circle in plane ⊥ B (D ✓).\", \"answer\": [\"A\", \"B\", \"D\"], \"final_value\": \"A, B, D\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.95}"
+}

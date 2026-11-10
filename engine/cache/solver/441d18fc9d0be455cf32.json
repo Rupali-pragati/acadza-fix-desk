@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Botany | Chapter: Photosynthesis in Higher Plants\n\nQUESTION:\nWho provided the evidence for the production of glucose when plant grows?\n\n(A) Julius von Sachs\n(B) Stephen Hales\n(C) Lavoisier\n(D) Von Helmont",
+ "response": "{\"working\": \"Julius von Sachs (1854) showed that glucose is made in green parts of plants and stored as starch.\", \"answer\": \"A\", \"final_value\": \"Julius von Sachs\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.95}"
+}

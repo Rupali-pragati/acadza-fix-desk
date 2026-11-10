@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Zoology | Chapter: Digestion and Absorption\n\nQUESTION:\nAggregates of lymphoid tissue present in the distal portion of the small intestine are known as\n\n(A) Villi\n(B) Peyer’s patches\n(C) Rugae\n(D) Choroid plexux",
+ "response": "{\"working\": \"Peyer's patches are lymphoid aggregates in the ileum (distal small intestine).\", \"answer\": \"B\", \"final_value\": \"Peyer's patches\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.99}"
+}

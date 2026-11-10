@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Zoology | Chapter: Biotechnology and its Applications\n\nQUESTION:\nConsumption of which one of the following foods can prevent the kind of blindness associated with vitamin 'A' deficiency?\n\n(A) 'Flavr Savr' tomato\n(B) Canolla\n(C) Golden rice\n(D) Bt-Brinjal",
+ "response": "{\"working\": \"Golden rice is engineered to make β-carotene (provitamin A), preventing night blindness.\", \"answer\": \"C\", \"final_value\": \"Golden rice\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.99}"
+}

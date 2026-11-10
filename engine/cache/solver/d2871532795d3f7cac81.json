@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Electrostatics\n\nQUESTION:\nA parallel plate capacitor is filled with a dielectric whose dielectric constant varies with the applied voltage as K = αV , where α = 1 volt ^(− 1) . Another identical capacitor (without dielectric) charged to a potential drop V_0 = 30 volt is connected in parallel to the first uncharged capacitor. The final potential drop across each capacitor is\n\n(A) 5 V\n(B) 10 V\n(C) 15 V\n(D) 20 V",
+ "response": "{\"working\": \"Charge conserved: C0·30 = C0·V + (αV)C0·V ⇒ V² + V − 30 = 0 ⇒ V = 5 V.\", \"answer\": \"A\", \"final_value\": \"5 V\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.97}"
+}

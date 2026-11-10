@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Zoology | Chapter: Chemical Coordination and Integration\n\nQUESTION:\nWhich of the following pairs of hormones are not antagonistic (having opposite effects) to each other?\n\n(A) Parathormone – Calcitonin\n(B) Insulin - Glucagon\n(C) Aldosterone Atrial Natriuretic Factor\n(D) Relaxin - Inhibin",
+ "response": "{\"working\": \"PTH/calcitonin, insulin/glucagon, aldosterone/ANF are antagonistic pairs. Relaxin and inhibin are not.\", \"answer\": \"D\", \"final_value\": \"Relaxin – Inhibin\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.95}"
+}

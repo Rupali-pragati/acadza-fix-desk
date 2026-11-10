@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.3,
+ "created": "2026-11-10T17:05:09Z",
+ "usage": {},
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Photoelectric effect and matter waves\n\nQUESTION:\nThe kinetic energy of an electron with de-Broglie wavelength of 0.3 nanometer is\n\n(A) 0.168 eV\n(B) 16.8 eV\n(C) 1.68 eV\n(D) 2.5 eV\n\nSTORED ANSWER KEY: \"B\"\n\nSTORED SOLUTION:\n= 5.469×10^(− 10)m = 5.47\\AA λ = h/(|p|) = h/(|I|) = 2.65×10^(− 18)J = 16.8eV\n\nDecisions, one per student:\n{\"reportId\": \"R018\", \"student_comment\": \"solution is of some other question\", \"verdict\": \"defect\", \"repair\": \"solution_fix\", \"route\": \"auto_apply\", \"what_changed\": \"solution corrected\", \"student_was_right\": \"yes\", \"key_point\": \"The stored solution computes lambda = 5.47 A from other data and then asserts 16.8 eV; it never uses 0.3 nm. Correct: K = h^2/(2m lambda^2) = (6.63e-34)^2/(2 x 9.1e-31 x (3e-10)^2) = 2.68e-18 J = 16.8 eV = (B), matching the key and the blind solve.\", \"manipulation_attempt\": false}\n{\"reportId\": \"R019\", \"student_comment\": \"solution me 5.47 angstrom aa raha hai, question me kuch aur pucha hai\", \"verdict\": \"defect\", \"repair\": \"solution_fix\", \"route\": \"auto_apply\", \"what_changed\": \"solution corrected\", \"student_was_right\": \"yes\", \"key_point\": \"The stored solution computes lambda = 5.47 A from other data and then asserts 16.8 eV; it never uses 0.3 nm. Correct: K = h^2/(2m lambda^2) = (6.63e-34)^2/(2 x 9.1e-31 x (3e-10)^2) = 2.68e-18 J = 16.8 eV = (B), matching the key and the blind solve.\", \"manipulation_attempt\": false}",
+ "response": "{\"replies\": [{\"reportId\": \"R018\", \"reply\": \"You were right: the old solution belonged to a different problem. It now uses λ = 0.3 nm directly: K = h²/(2mλ²) ≈ 16.8 eV, answer (B).\"}]}"
+}

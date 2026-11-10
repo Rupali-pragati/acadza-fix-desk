@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Photoelectric effect and matter waves\n\nQUESTION:\nThe kinetic energy of an electron with de-Broglie wavelength of 0.3 nanometer is\n\n(A) 0.168 eV\n(B) 16.8 eV\n(C) 1.68 eV\n(D) 2.5 eV",
+ "response": "{\"working\": \"KE(eV) = 150/λ²(Å) for an electron; λ = 3 Å ⇒ KE = 150/9 ≈ 16.7 eV.\", \"answer\": \"B\", \"final_value\": \"16.8 eV\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.96}"
+}

@@ -1,0 +1,21 @@
+{
+ "model": "gemini-3-flash-preview",
+ "temperature": 0.7,
+ "created": "2026-11-10T12:52:23Z",
+ "usage": {
+  "promptTokenCount": 658,
+  "candidatesTokenCount": 192,
+  "totalTokenCount": 1198,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 658
+   }
+  ],
+  "thoughtsTokenCount": 348,
+  "serviceTier": "standard"
+ },
+ "system_sha": "a82169402963",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Alternating Current and EM Waves\n\nQUESTION:\nIn a LCR circuit the pd between the terminals of the inductance is 60 V, between the terminals of the capacitor is 30V and that between the terminals of resistance is 40V. the supply voltage will be equal to ……\n\n(A) 50 V\n(B) 70 V\n(C) 130 V\n(D) 10 V",
+ "response": "{\n  \"working\": \"In a series LCR circuit, the supply voltage V is given by the phasor sum: V = sqrt(V_R^2 + (V_L - V_C)^2). Given V_L = 60 V, V_C = 30 V, and V_R = 40 V, we substitute: V = sqrt(40^2 + (60 - 30)^2) = sqrt(1600 + 30^2) = sqrt(1600 + 900) = sqrt(2500) = 50 V.\",\n  \"answer\": \"A\",\n  \"final_value\": \"50 V\",\n  \"answerable\": true,\n  \"problem\": null,\n  \"problem_detail\": \"\",\n  \"confidence\": 5.0\n}"
+}

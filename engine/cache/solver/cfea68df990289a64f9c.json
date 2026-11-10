@@ -1,0 +1,21 @@
+{
+ "model": "gemini-3.5-flash",
+ "temperature": 0.0,
+ "created": "2026-11-10T12:50:58Z",
+ "usage": {
+  "promptTokenCount": 600,
+  "candidatesTokenCount": 203,
+  "totalTokenCount": 1497,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 600
+   }
+  ],
+  "thoughtsTokenCount": 694,
+  "serviceTier": "standard"
+ },
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Newton's law of motion\n\nQUESTION:\nA block of weight 100 N when pushed by a force F on a horizontal rough surface moves with an acceleration 1 m/s^2 , when force is doubled its acceleration becomes 10 m/s^2 . The coefficient of friction between block and surface is (g = 10 m/s^2)\n\n(A) 0.8\n(B) 0.4\n(C) 0.6\n(D) 0.2",
+ "response": "{\n  \"working\": \"Mass m = W/g = 100/10 = 10 kg. Friction force f_k = \\u03bc W = 100\\u03bc. Equations of motion: F - 100\\u03bc = 10(1) = 10 and 2F - 100\\u03bc = 10(10) = 100. Subtracting gives F = 90 N. Then 90 - 100\\u03bc = 10 \\u21d2 \\u03bc = 0.8.\",\n  \"answer\": \"A\",\n  \"final_value\": \"0.8\",\n  \"answerable\": true,\n  \"problem\": null,\n  \"problem_detail\": \"\",\n  \"confidence\": 1.0\n}"
+}

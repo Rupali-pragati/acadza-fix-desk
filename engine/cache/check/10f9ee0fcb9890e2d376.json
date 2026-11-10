@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3-flash-preview",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.7,
+ "created": "2026-11-10T16:42:10Z",
+ "usage": {},
+ "system_sha": "a82169402963",
+ "user": "Type: mcq  (multiple correct: one or more of A-D, answer is a list of letters)\nSubject: Physics | Chapter: Mathematics in physics\n\nQUESTION:\nA sample of nuclei X contains 48×10^23 nuclei at some time and reduced to 6×10^23 nuclei in 3 minutes. The mean life of nucleus X is roughly?\n\n(A) 0.693 min\n(B) 1.44 min\n(C) 2.079 min\n(D) 4.329 min",
+ "response": "{\"working\": \"N = N0 e^(-t/τ): ln(48/6) = ln 8 = 2.079 = 3/τ ⇒ τ = 3/2.079 = 1.443 min.\", \"answer\": [\"B\"], \"final_value\": \"1.44 min\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.97}"
+}

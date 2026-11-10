@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Nuclear physics and radioactivity\n\nQUESTION:\nThe half life period of a radioactive substance is 60 days. The time taken for \\frac{7}{8} th of its original mass to disintegrate will be :\n\n(A) 120 days\n(B) 130 days\n(C) 180 days\n(D) 20 days",
+ "response": "{\"working\": \"Remaining = 1/8 = (1/2)^3 ⇒ 3 half-lives = 3×60 = 180 days.\", \"answer\": \"C\", \"final_value\": \"180 days\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.99}"
+}

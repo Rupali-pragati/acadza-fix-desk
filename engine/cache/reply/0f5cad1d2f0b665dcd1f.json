@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.3,
+ "created": "2026-11-10T17:05:09Z",
+ "usage": {},
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: integerQuestion  (numerical answer typed by the student)\nSubject: Physics | Chapter: Properties of matter and fluid mechanics\n\nQUESTION:\nA wooden cube just floats inside water when a 800 g mass is placed on it. When the mass is removed, the cube is 2 cm above the water level. What is the size of the side of the cube (in cm) ?\n\nSTORED ANSWER KEY: \"20\"\n\nSTORED SOLUTION:\nLet a be the size of each side of the cube. Then,\n\r\n\r\n800 × g = (2) × (a^2) × 1 × g\n\r\n\r\na = 40 cm\n\nDecisions, one per student:\n{\"reportId\": \"R016\", \"student_comment\": \"solution says 40 cm but answer is 20, which one is correct?\", \"verdict\": \"defect\", \"repair\": \"solution_fix\", \"route\": \"auto_apply\", \"what_changed\": \"solution corrected\", \"student_was_right\": \"yes\", \"key_point\": \"800 g = 2 cm x a^2 x 1 g/cm^3 gives a^2 = 400, a = 20 cm. The solution's own equation gives 20 but its last line says 40 cm; the key 20 is right.\", \"manipulation_attempt\": false}",
+ "response": "{\"replies\": [{\"reportId\": \"R016\", \"reply\": \"Good catch: the solution's last line wrongly said 40 cm. It now ends correctly, since a² = 400 gives a = 20 cm, so the answer 20 was right all along.\"}]}"
+}

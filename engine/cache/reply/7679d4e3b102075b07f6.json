@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.3,
+ "created": "2026-11-10T17:05:09Z",
+ "usage": {},
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: scq  (single correct: exactly one of A-D)\nSubject: Botany | Chapter: Photosynthesis in Higher Plants\n\nQUESTION:\nWho provided the evidence for the production of glucose when plant grows?\n\n(A) Julius von Sachs\n(B) Stephen Hales\n(C) Lavoisier\n(D) Von Helmont\n\nSTORED ANSWER KEY: \"A\"\n\nSTORED SOLUTION:\nJulius von Sachs provided evidence for the production of glucose when plants grow. Glucose is usually stored as starch. His later studies showed that the green substance in plants (chlorophyll as we know it now) is located in special bodies (later called chloroplast) within plant cells.\n\r\nHe found that the green parts in plants are where glucose is made, and that the glucose is usually stored as starch\n\nDecisions, one per student:\n{\"reportId\": \"R041\", \"student_comment\": \"asdfgh\", \"verdict\": \"not_actionable\", \"repair\": null, \"route\": \"no_change\", \"what_changed\": \"\", \"student_was_right\": \"no\", \"key_point\": \"The comment 'asdfgh' carries no information; stem, options, key (A, Julius von Sachs) and solution all check out.\", \"manipulation_attempt\": false}",
+ "response": "{\"replies\": [{\"reportId\": \"R041\", \"reply\": \"We checked this question and couldn't find a problem. Could you tell us what exactly looked wrong, so we can look again?\"}]}"
+}

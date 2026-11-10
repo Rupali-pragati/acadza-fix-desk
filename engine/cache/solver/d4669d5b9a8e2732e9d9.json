@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: integerQuestion  (numerical answer typed by the student)\nSubject: Physics | Chapter: Newton's law of motion\n\nQUESTION:\nA body of mass 2 kg is kept by pressing to a vertical wall by a force of 100 N. The friction between wall and body is 0.3. Then the frictional force is equal to",
+ "response": "{\"working\": \"Limiting friction μN = 0.3 × 100 = 30 N > mg = 20 N, so the body is at rest and static friction balances weight: f = 20 N.\", \"answer\": \"20\", \"final_value\": \"20 N\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.95}"
+}

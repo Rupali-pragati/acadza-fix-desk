@@ -1,0 +1,20 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "temperature": 0.3,
+ "created": "2026-11-10T12:52:11Z",
+ "usage": {
+  "promptTokenCount": 685,
+  "candidatesTokenCount": 58,
+  "totalTokenCount": 743,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 685
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: scq  (single correct: exactly one of A-D)\nSubject: Zoology | Chapter: Structural Organisation in Animals\n\nQUESTION:\nWhich tissue is present in the lining of small intestine?\n\n(A) Epithellial tisue\n(B) Connective tissue\n(C) Nervous tissue\n(D) Muscular tissue\n\nSTORED ANSWER KEY: \"A\"\n\nSTORED SOLUTION:\nEpithelial tissue has free surfaces, which faces either a body fluid or the outside environment and thus, provides a covering or a lining for some part of body. It is found on a lining of small intestine and helps in secretion and absorption\n\nDecisions, one per student:\n{\"reportId\": \"R012\", \"student_comment\": \"spelling mistake in option A\", \"verdict\": \"defect\", \"repair\": \"spelling\", \"route\": \"auto_apply\", \"what_changed\": \"option (A) now reads 'Epithelial tissue'\", \"student_was_right\": \"yes\", \"key_point\": \"Option (A) contains spelling mistakes ('Epithellial tisue' instead of 'Epithelial tissue'). Corrected spelling to 'Epithelial tissue'.\", \"manipulation_attempt\": false}",
+ "response": "{\n  \"replies\": [\n    {\n      \"reportId\": \"R012\",\n      \"reply\": \"Good catch on that spelling mistake in option A. We have corrected it to 'Epithelial tissue'.\"\n    }\n  ]\n}"
+}

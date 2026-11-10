@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Work, power and energy\n\nQUESTION:\nIf the kinetic energy of a body becomes four times of its initial value, then new momentum will\n\n(A) Become twice its initial value\n(B) Become three times, its initial value\n(C) Become four times, its initial value\n(D) Remains constant",
+ "response": "{\"working\": \"p = √(2mK); K → 4K ⇒ p → 2p.\", \"answer\": \"A\", \"final_value\": \"twice\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.99}"
+}

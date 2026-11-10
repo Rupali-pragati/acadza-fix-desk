@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.3,
+ "created": "2026-11-10T17:05:28Z",
+ "usage": {},
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: mcq  (multiple correct: one or more of A-D, answer is a list of letters)\nSubject: Physics | Chapter: Mathematics in physics\n\nQUESTION:\nA sample of nuclei X contains 48×10^23 nuclei at some time and reduced to 6×10^23 nuclei in 3 minutes. The mean life of nucleus X is roughly?\n\n(A) 0.693 min\n(B) 1.44 min\n(C) 2.079 min\n(D) 4.329 min\n\nSTORED ANSWER KEY: [\"\", \"B\"]\n\nSTORED SOLUTION:\nA sample of nuclei decreases from 48 × 10^23 to 6 × 10^23 in 3 minutes.\n\nRadioactive decay law: N = N_0e^(− t/τ)\n\nHere N/(N_0) = 6/48 = 1/8 so N/(N_0) = e^(− t/τ) = 1/8\n\nTaking natural logarithm: ln(1/8) = − t/τ so t/τ = ln(8) and therefore τ = t/(ln⁡(8)) .\n\nSince t = 3min and ln(8) = ln(2^3) = 3ln(2) ≈ 2.079 we get τ = 3/2.079 ≈ 1.44min .\n\nHence the mean life of the nucleus is τ ≈ 1.44min .\n\nDecisions, one per student:\n{\"reportId\": \"R021\", \"student_comment\": \"only B is correct but its multiple correct type and I got negative\", \"verdict\": \"defect\", \"repair\": \"type_mismatch\", \"route\": \"auto_apply\", \"what_changed\": \"question type changed from mcq to scq; answer key changed from (B) 1.44 min to (B) 1.44 min\", \"student_was_right\": \"yes\", \"key_point\": \"Only (B) 1.44 min is correct (tau = 3/ln 8 = 1.44 min; both blind solves and the stored solution agree), yet the question is stored as multiple-correct with a broken key ['', 'B']. Changed to single-correct with key B.\", \"manipulation_attempt\": false}",
+ "response": "{\"replies\": [{\"reportId\": \"R021\", \"reply\": \"You were right: only (B) 1.44 min is correct, but the question was set as multiple-correct. It is now single-correct with answer (B).\"}]}"
+}

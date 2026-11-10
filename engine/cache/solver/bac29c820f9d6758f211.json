@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Electrostatics\n\nQUESTION:\nTwo point charges repel each other with a force of 100 N. One of the charges is increased by 10% and the other is reduced by 10%. The new force of repulsion at the same distance would be\n\n(A) 100 N\n(B) 121 N\n(C) 99 N\n(D) None of these",
+ "response": "{\"working\": \"F ∝ q1q2: 1.1 × 0.9 = 0.99 ⇒ 99 N.\", \"answer\": \"C\", \"final_value\": \"99 N\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.99}"
+}

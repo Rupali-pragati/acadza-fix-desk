@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.3,
+ "created": "2026-11-10T17:05:28Z",
+ "usage": {},
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Electrostatics\n\nQUESTION:\nThere are two charges + 3μC and − 4μC placed at a certain distance apart. The ratio of coulombic forces acting on them will be\n\n(A) 9:16\n(B) 2:√(3)\n(C) [BLANK - nothing shown to students]\n(D) 3:4\n\nSTORED ANSWER KEY: \"C\"\n\nSTORED SOLUTION:\nvec(F)_12 + vec(F)_21 = 0\n\n|vec(F)_12| = | − vec(F)_21|\n\nDecisions, one per student:\n{\"reportId\": \"R011\", \"student_comment\": \"option C blank hai, answer C hai toh kya mark karu\", \"verdict\": \"defect\", \"repair\": \"option_repair\", \"route\": \"auto_apply\", \"what_changed\": \"option (C) now reads '1:1'\", \"student_was_right\": \"yes\", \"key_point\": \"Option (C) is blank but it is the key. Newton's third law gives |F12| = |F21|, so the ratio is 1:1; the stored solution says the same and both blind solves give 1:1. Restored (C) as 1:1.\", \"manipulation_attempt\": false}",
+ "response": "{\"replies\": [{\"reportId\": \"R011\", \"reply\": \"Aap sahi the, option (C) blank tha. Ab (C) mein 1:1 likha hai, aur wahi sahi answer hai, kyunki Newton's third law se dono charges par force barabar hoti hai.\"}]}"
+}

@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.3,
+ "created": "2026-11-10T16:42:10Z",
+ "usage": {},
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: integerQuestion  (numerical answer typed by the student)\nSubject: Physics | Chapter: Wave optics\n\nQUESTION:\nIn YDSE distance between the slits plane and screen is 1 m and distance between two slits is 5 mm . If slabs of thickness 2 mm and 1.5 mm having refractive index 1.5 and 1.4 are placed in front of two slits, find the shift (in cm ) of central maxima\n\nSTORED ANSWER KEY: \"8\"\n\nSTORED SOLUTION:\nD = 1 m, d = 5×10^(− 3) m\nshift = D/d[t_1(μ_1 − 1) − t_2(μ_2 − 1)]\n= 1/(5×10^(− 3))[2(1.5 − 1) − 1.5(1.4 − 1)]×10^(− 3) = 0.4/5 = 0.08 m .\n\nDecisions, one per student:\n{\"reportId\": \"R032\", \"student_comment\": \"answer 0.08 hai, 8 kyu?\", \"verdict\": \"no_error\", \"repair\": null, \"route\": \"no_change\", \"what_changed\": \"\", \"student_was_right\": \"no\", \"key_point\": \"The question asks for the shift in cm: 0.08 m = 8 cm, so key 8 is right. Blind solve: (1/5e-3)×0.4e-3 = 0.08 m = 8 cm.\", \"manipulation_attempt\": false}",
+ "response": "{\"replies\": [{\"reportId\": \"R032\", \"reply\": \"Aapka calculation sahi hai: shift 0.08 m aata hai. Question cm mein maang raha hai, aur 0.08 m = 8 cm, isliye answer 8 hai. Unit wala step hamesha last mein check kar lena.\"}]}"
+}

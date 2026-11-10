@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.3,
+ "created": "2026-11-10T17:05:09Z",
+ "usage": {},
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Photoelectric effect and matter waves\n\nQUESTION:\nLight of wavelength 4000 A^∘ falls on a metal surface having work function of 2.0 eV. What is the stopping potential?\n\n(A) 3.1 V\n(B) 2.0 V\n(C) 5.1 V\n(D) 1.1 V\n\nSTORED ANSWER KEY: \"D\"\n\nSTORED SOLUTION:\nEnergy of incident photon (hc)/λ = 12400/λ = 12400/4000 eV = 3.1eV k_(max) = hν - φ = 3.1eV - 2.0eV = 1.1eV Hence, stopping potential 1.1 V\n\nDecisions, one per student:\n{\"reportId\": \"R037\", \"student_comment\": \"question takes forever to load\", \"verdict\": \"display_issue\", \"repair\": null, \"route\": \"no_change\", \"what_changed\": \"\", \"student_was_right\": \"partly\", \"key_point\": \"Slow loading is a delivery problem; the content is correct (3.1 - 2.0 = 1.1 V, key D).\", \"manipulation_attempt\": false}",
+ "response": "{\"replies\": [{\"reportId\": \"R037\", \"reply\": \"The question itself is fine, so slow loading is an app problem and the team has it. Checking your connection or reopening the question may help meanwhile.\"}]}"
+}

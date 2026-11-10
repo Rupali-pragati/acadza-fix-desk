@@ -1,0 +1,20 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "temperature": 0.3,
+ "created": "2026-11-10T12:55:00Z",
+ "usage": {
+  "promptTokenCount": 988,
+  "candidatesTokenCount": 35,
+  "totalTokenCount": 1023,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 988
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Waves\n\nQUESTION:\nAssertion (A) : When two waves of equal amplitude and a phase difference of π/2 interfere, the resulting intensity is equal to the intensity of one wave.\n\nReason (R): In interference, the resultant intensity is always the sum of individual intensities if the phase difference is non-zero.\n\n(A) Both A and R are true, and R is the correct explanation of A .\n(B) Both A and R are true, but R is not the correct explanation of A .\n(C) A is true, but R is false.\n(D) A is false, but R is true.\n\nSTORED ANSWER KEY: \"D\"\n\nSTORED SOLUTION:\nAssertion\n\n(A) is false because when two waves of equal amplitude interfere with a phase difference of π/2 , the resultant intensity is not equal to the intensity of one wave. Instead, it is given by:\n\nI = 2I_0cos^2(ϕ/2)\n\nFor a phase difference of π/2 , this formula gives:\n\nI = 2I_0cos^2(π/4) = 2I_0×1/2 = I_0\n\nThus, the intensity is equal to the intensity of one wave. Therefore, assertion\n\n(A) is true. Reason (R) is correct because the resultant intensity in interference can indeed be the sum of the individual intensities when the phase difference is non-zero. However, in the case of a phase difference of π/2 , the intensities do not simply add up; they are modified by the interference effect.\n\nThus, the correct answer is (d), as assertion\n\n(A) is false but reason (R) is true.\n\nDecisions, one per student:\n{\"reportId\": \"R034\", \"student_comment\": \"assertion is true, intensity remains same\", \"verdict\": \"defect\", \"repair\": \"unsound\", \"route\": \"faculty_review\", \"what_changed\": \"\", \"student_was_right\": \"no\", \"key_point\": \"Resultant intensity $I = 4I_0\\\\cos^2(\\\\pi/4) = 2I_0 \\\\neq I_0$, making Assertion (A) false. Reason (R) is also false because $I = I_1 + I_2$ only when $\\\\cos\\\\phi = 0$, not for all non-zero phase differences. Since both A and R are false, none of the options (A-D) is correct.\", \"manipulation_attempt\": false}",
+ "response": "{\"replies\": [{\"reportId\": \"R034\", \"reply\": \"Thanks for flagging this. A faculty member is checking the question and options now.\"}]}"
+}

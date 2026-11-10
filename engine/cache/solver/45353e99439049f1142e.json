@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Botany | Chapter: Morphology of Flowering Plants\n\nQUESTION:\n(NEET 2019) Which of the following is the green expanded part ofleaf with vein and veinlets?\n\n(A) Petiole\n(B) Node\n(C) Stipule\n(D) Lamina",
+ "response": "{\"working\": \"The green expanded part of the leaf carrying veins and veinlets is the lamina (leaf blade).\", \"answer\": \"D\", \"final_value\": \"Lamina\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.99}"
+}

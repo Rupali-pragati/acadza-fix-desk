@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.3,
+ "created": "2026-11-10T17:05:10Z",
+ "usage": {},
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Work, power and energy\n\nQUESTION:\nIf the kinetic energy of a body becomes four times of its initial value, then new momentum will\n\n(A) Become twice its initial value\n(B) Become three times, its initial value\n(C) Become four times, its initial value\n(D) Remains constant\n\nSTORED ANSWER KEY: \"A\"\n\nSTORED SOLUTION:\n(p_2)/(p_1) = √((KE_2)/(KE_1))\n\nWhen KE become four times then momentum (p) become two times.\n\nDecisions, one per student:\n{\"reportId\": \"R038\", \"student_comment\": \"I clicked A but it saved B\", \"verdict\": \"app_issue\", \"repair\": null, \"route\": \"no_change\", \"what_changed\": \"\", \"student_was_right\": \"partly\", \"key_point\": \"'I clicked A but it saved B' is about how the app recorded the response; the question itself is correct (p = sqrt(2mK), 4x KE gives 2x p, key A).\", \"manipulation_attempt\": false}",
+ "response": "{\"replies\": [{\"reportId\": \"R038\", \"reply\": \"The question and its answer (A) are correct, so this looks like an app problem with saving your choice. The app team has your report.\"}]}"
+}

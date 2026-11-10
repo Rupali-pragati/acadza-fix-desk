@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: AC Circuits\n\nQUESTION:\nIn an AC circuit, the current is i = 5sin(100t − π/2)A and voltage is e = 200sin(100t) volt. Power consumption in the circuit is ( cos90° = 0 )\n\n(A) 200 W\n(B) 0 W\n(C) 0 W\n(D) 1000 W",
+ "response": "{\"working\": \"Phase difference π/2 ⇒ P = V_rms I_rms cos90° = 0 W. Options B and C are both '0 W', so two options are correct.\", \"answer\": null, \"final_value\": \"0 W\", \"answerable\": false, \"problem\": \"multiple_correct\", \"problem_detail\": \"Options B and C are identical (both '0 W').\", \"confidence\": 0.97}"
+}

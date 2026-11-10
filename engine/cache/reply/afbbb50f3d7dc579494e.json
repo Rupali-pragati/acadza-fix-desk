@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.3,
+ "created": "2026-11-10T17:05:10Z",
+ "usage": {},
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: integerQuestion  (numerical answer typed by the student)\nSubject: Physics | Chapter: Electrostatics\n\nQUESTION:\nA total charge Q is uniformly distributed throughout the volume of a sphere. Electric potential at a point on the surface of the sphere is greater than the potential at infinity by 16 V . Find the potential difference (in volt) between point 𝐏 at a distance half of the radius of the sphere from the centre and the point 𝐒 at a distance double the radius of the sphere from the centre of the sphere.\n\nSTORED ANSWER KEY: \"14\"\n\nSTORED SOLUTION:\nLet R be the radius of the sphere, therefore, potential on the surface is given by V_0 = V_∞ + (KQ)/R = V_∞ + V ⇒ V = (KQ)/R ∵ V_P = V_∞ + (KQ)/(2R^3)(3R^2 − (R^2)/4) = V_∞ + (11V)/8 and V_S = V_∞ + (KQ)/(2R) = V_∞ + V/2 ⇒ V_P − V_S = (7V)/8 = 14V\n\nDecisions, one per student:\n{\"reportId\": \"R044\", \"student_comment\": \"answer is 22 V not 14\", \"verdict\": \"no_error\", \"repair\": null, \"route\": \"no_change\", \"what_changed\": \"\", \"student_was_right\": \"no\", \"key_point\": \"V_P = 16 x 11/8 = 22 V and V_S = 16/2 = 8 V, so V_P - V_S = 14 V. 22 V is only V_P, not the difference asked for.\", \"manipulation_attempt\": false}",
+ "response": "{\"replies\": [{\"reportId\": \"R044\", \"reply\": \"22 V is the potential at P on its own. The question asks for V_P − V_S, and since V_S = 8 V, the difference is 22 − 8 = 14 V.\"}]}"
+}

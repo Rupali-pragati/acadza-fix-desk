@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Properties of matter and fluid mechanics\n\nQUESTION:\nA glass tube of uniform internal radius (r) has a valve separating the two identical ends. Initially, the valve is in a tightly closed position. End 1 has a hemispherial soap bubble of radius r . End 2 has sub-hemispherical soap bubble as shown in figure.\n\nJust after opening the valve.\n\n(A) air from end 1 flows towards end 2 . No change in the volume of the soap bubbles\n(B) air from end 1 flows towards end 2. Volume of the soap bubble at end 1 decreases\n(C) no change occurs\n(D) air from end 2 flows towards end 1 . Volume of the soap bubble at end 1 increases",
+ "response": "{\"working\": \"Excess pressure 4T/R. End 1 is hemispherical (R = r, the smallest possible radius ⇒ highest pressure); end 2 is sub-hemispherical (R > r ⇒ lower pressure). On opening, air flows 1 → 2 and bubble 1 shrinks. The text is enough without the figure.\", \"answer\": \"B\", \"final_value\": \"air flows 1→2, bubble 1 volume decreases\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.85}"
+}

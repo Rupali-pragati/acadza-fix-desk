@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: integerQuestion  (numerical answer typed by the student)\nSubject: Physics | Chapter: Properties of matter and fluid mechanics\n\nQUESTION:\nA wooden cube just floats inside water when a 800 g mass is placed on it. When the mass is removed, the cube is 2 cm above the water level. What is the size of the side of the cube (in cm) ?",
+ "response": "{\"working\": \"Removing 800 g makes 2 cm of the cube rise out: a²·2·(1 g/cm³) = 800 g ⇒ a² = 400 ⇒ a = 20 cm.\", \"answer\": \"20\", \"final_value\": \"20 cm\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.97}"
+}

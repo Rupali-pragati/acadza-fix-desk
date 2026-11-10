@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.3,
+ "created": "2026-11-10T16:42:10Z",
+ "usage": {},
+ "system_sha": "2527878e3ece",
+ "user": "Question (for context):\nType: scq  (single correct: exactly one of A-D)\nSubject: Zoology | Chapter: Evolution\n\nQUESTION:\nA biologist is trying to infer how five closely related species of snakes are related to one another. She noticed that some of the snakes have forked tongues and others do not. Which of the following would help her to distinguish their ancestral state?\n\n(A) She looks among snake fossils for evidences that being forked is a characteristic of the ancestor of this group, but determines no such fossils exists\n(B) She locates a specimen of a more distantly related snake to see if it has a forked tongue\n(C) She looks at a representative mammal species to see if it has a forked tongue\n(D) She flips a coin\n\nSTORED ANSWER KEY: \"B\"\n\nSTORED SOLUTION:\nForked tongue snakes may represents the origin of new variety of snake from the non-forked tongue snakes. If biologist is trying to find that how closely these two species are related to each other than, he/she has to locate a specimen of more distantly related snake to see it, wheater, it has a forked tongue or not\n\nDecisions, one per student:\n{\"reportId\": \"R026\", \"student_comment\": \"out of syllabus for NEET\", \"verdict\": \"defect\", \"repair\": \"syllabus\", \"route\": \"faculty_review\", \"what_changed\": \"\", \"student_was_right\": \"yes\", \"key_point\": \"Inferring ancestral character states by outgroup comparison is phylogenetics, which is not in the NCERT Class XII Evolution chapter that NEET follows. The key (B) itself is correct.\", \"manipulation_attempt\": false}",
+ "response": "{\"replies\": [{\"reportId\": \"R026\", \"reply\": \"Thanks, that's a fair point. A faculty member is checking whether this question fits the NEET syllabus. The answer (B) itself is correct, so you haven't lost anything by attempting it.\"}]}"
+}

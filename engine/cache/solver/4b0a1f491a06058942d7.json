@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Electrostatics\n\nQUESTION:\nSixty four conducting drops each of radius 0.02 m and each carrying a charge of 5μC are combined to form a bigger drop. The ratio of surface density of bigger drop to the smaller drop will be :\n\n(A) 1:4\n(B) 4:1\n(C) 1:8\n(D) 8:1",
+ "response": "{\"working\": \"Volume conserved: R = 64^(1/3) r = 4r. Q = 64q. σ ∝ Q/R² ⇒ σ_big/σ_small = 64/16 = 4.\", \"answer\": \"B\", \"final_value\": \"4:1\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.98}"
+}

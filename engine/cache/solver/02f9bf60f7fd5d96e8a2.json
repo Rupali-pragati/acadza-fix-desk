@@ -1,0 +1,10 @@
+{
+ "model": "gemini-3.5-flash",
+ "answeredBy": "claude-opus-5-5 (Claude Code, standing in while the Gemini free-tier daily quota was exhausted)",
+ "temperature": 0.0,
+ "created": "2026-11-10T16:38:24Z",
+ "usage": {},
+ "system_sha": "3d92e657abb1",
+ "user": "Type: scq  (single correct: exactly one of A-D)\nSubject: Physics | Chapter: Motion in a Plane\n\nQUESTION:\nThe angle of projection of a projectile for which horizontal range and height attain same magnitude is\n\n(A) tan^(− 1)(2)\n(B) tan^(− 1)(4)\n(C) tan^(− 1)(3)\n(D) tan^(− 1)(0.5)",
+ "response": "{\"working\": \"R = u²sin2θ/g, H = u²sin²θ/2g. R = H ⇒ 2sinθcosθ = sin²θ/2 ⇒ tanθ = 4.\", \"answer\": \"B\", \"final_value\": \"θ = tan⁻¹(4)\", \"answerable\": true, \"problem\": null, \"problem_detail\": \"\", \"confidence\": 0.98}"
+}
