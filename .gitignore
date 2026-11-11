@@ -17,3 +17,4 @@ Thumbs.db
 .vercel
 engine/pending/
 _private/
+.claude/
