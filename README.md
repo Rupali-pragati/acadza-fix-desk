@@ -86,7 +86,8 @@ With a key (free tier is enough): put `GEMINI_API_KEY=...` in `.env`, then `pyth
 ## Deploy (static, free)
 
 - **Vercel:** import the repo. `vercel.json` already sets the output to `web/` with no build.
-- **GitHub Pages:** push to `main`. `.github/workflows/pages.yml` runs the tests, re-runs the engine in `--replay` mode, checks that `results.json` is reproducible, then deploys `web/`.
+- **Render (live):** static site, publish directory `web`, no build step. GitHub Pages or any static host works the same way.
+- **CI:** `.github/workflows/ci.yml` runs the tests on every push, re-runs the engine in `--replay` mode, and fails if `results.json` is not exactly reproducible.
 - **Netlify:** `netlify.toml` publishes `web/`.
 
 ## Layout
